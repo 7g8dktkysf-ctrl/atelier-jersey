@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Upload Design — ATELIER JERSEY</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="nav"><a class="brand" href="index.html">ATELIER<span>JERSEY</span></a><nav><a href="collections.html">COLLECTION</a><a href="customizer.html">DESIGN YOURS</a><a class="active" href="upload.html">UPLOAD DESIGN</a></nav><a class="nav-cta" href="customizer.html">START DESIGNING ↗</a></header>
+<main class="page narrow">
+  <div class="page-head"><p class="eyebrow">UPLOAD / YOUR ARTWORK</p><h1>Bring your<br><em>design.</em></h1><p>Upload your existing jersey artwork and our production team can use it as the visual reference.</p></div>
+  <form class="upload-box" id="uploadForm">
+    <label class="dropzone" id="dropzone">
+      <input id="designFile" type="file" accept="image/*,.pdf,.svg">
+      <span class="upload-icon">＋</span><strong>DROP YOUR DESIGN HERE</strong><small>PNG, JPG, WEBP, SVG or PDF / Max 15 MB</small>
+      <img id="preview" alt="" hidden>
+    </label>
+    <div class="two-col"><label>TEAM / BRAND NAME<input name="team" required placeholder="e.g. NORTHSIDE FC"></label><label>CONTACT EMAIL<input name="email" type="email" required placeholder="you@example.com"></label></div>
+    <label>NOTES<textarea name="notes" rows="5" placeholder="Colours, fabric preference, printing notes..."></textarea></label>
+    <button class="btn dark full" type="submit">CONTINUE WITH THIS DESIGN →</button>
+  </form>
+</main>
+<footer><div>ATELIER<span>JERSEY</span></div><p>Custom performance wear / 2026</p><a href="customizer.html">Create from scratch →</a></footer>
+<script>
+const input=document.getElementById('designFile'), preview=document.getElementById('preview');
+input.addEventListener('change',()=>{const f=input.files[0]; if(f && f.type.startsWith('image/')){preview.src=URL.createObjectURL(f);preview.hidden=false;}});
+document.getElementById('uploadForm').addEventListener('submit',e=>{e.preventDefault();alert('Design selected. Connect this form to your backend/storage when you are ready for real orders.');});
+</script>
+</body>
+</html>

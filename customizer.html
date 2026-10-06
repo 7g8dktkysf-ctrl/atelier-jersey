@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Design Your Jersey — ATELIER JERSEY</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="studio-body">
+<header class="nav studio-nav"><a class="brand" href="index.html">ATELIER<span>JERSEY</span></a><div class="studio-title">JERSEY STUDIO <span>/ CUSTOM BUILDER</span></div><a class="nav-cta" href="collections.html">EXIT STUDIO</a></header>
+
+<main class="studio">
+  <aside class="panel left-panel">
+    <div class="panel-head"><span>01</span><h2>FOUNDATION</h2></div>
+    <label>JERSEY STYLE<select id="styleSelect"></select></label>
+    <label>PRINT / GRAPHIC<select id="printSelect"></select></label>
+    <label>PATTERN<select id="patternSelect"></select></label>
+    <div class="colour-title">CUSTOM COLOURS</div>
+    <div class="colour-grid" id="colourGrid"></div>
+    <div class="swatch-row"><label>PRIMARY<input type="color" id="primary" value="#111111"></label><label>SECONDARY<input type="color" id="secondary" value="#e8e8e5"></label></div>
+  </aside>
+
+  <section class="viewer">
+    <div class="viewer-top"><span id="designNo">FORM 01</span><span>DRAG TO ROTATE / DOUBLE TAP TO RESET</span></div>
+    <div class="jersey-stage" id="stage">
+      <div class="jersey3d" id="jersey">
+        <div class="jersey-front" id="front">
+          <div class="sleeve sleeve-l"></div><div class="sleeve sleeve-r"></div><div class="collar"></div>
+          <div class="graphic" id="graphic"></div><div class="crest" id="crest">YOUR<br>CREST</div>
+          <div class="player-name" id="namePreview">PLAYER</div><div class="player-number" id="numberPreview">07</div>
+          <div class="front-logo">ATELIER</div>
+        </div>
+        <div class="jersey-back">
+          <div class="back-number" id="backNumber">07</div><div class="back-name" id="backName">PLAYER</div>
+        </div>
+      </div>
+      <div class="drag-hint">360°</div>
+    </div>
+    <div class="viewer-bottom"><button id="resetView">RESET VIEW</button><span id="angleLabel">FRONT / 0°</span><button id="autoSpin">AUTO ROTATE</button></div>
+  </section>
+
+  <aside class="panel right-panel">
+    <div class="panel-head"><span>02</span><h2>IDENTITY</h2></div>
+    <label>TEAM LOGO<input type="file" id="logoFile" accept="image/*"></label>
+    <div class="logo-preview" id="logoPreview">UPLOAD CREST</div>
+    <label>PLAYER NAME<input id="playerName" maxlength="16" placeholder="PLAYER"></label>
+    <label>PLAYER NUMBER<input id="playerNumber" type="number" min="0" max="99" value="07"></label>
+    <div class="panel-head second"><span>03</span><h2>SIZING</h2></div>
+    <div class="size-grid" id="sizes"></div>
+    <div class="panel-head second"><span>04</span><h2>QUANTITY</h2></div>
+    <div class="quantity"><button id="minus">−</button><strong id="qty">1</strong><button id="plus">+</button></div>
+    <div class="summary"><div><span>EST. PRICE</span><strong id="price">₹1,499</strong></div><button class="btn dark full" id="saveDesign">SAVE DESIGN →</button></div>
+  </aside>
+</main>
+
+<div class="mobile-tabs"><button data-open="left-panel">STYLE</button><button data-open="right-panel">DETAILS</button></div>
+<script src="js/app.js"></script><script src="js/customizer.js"></script>
+</body>
+</html>

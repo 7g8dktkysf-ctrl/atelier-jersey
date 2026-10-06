@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Collection — ATELIER JERSEY</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="nav"><a class="brand" href="index.html">ATELIER<span>JERSEY</span></a><nav><a class="active" href="collections.html">COLLECTION</a><a href="customizer.html">DESIGN YOURS</a><a href="upload.html">UPLOAD DESIGN</a></nav><a class="nav-cta" href="customizer.html">START DESIGNING ↗</a></header>
+<main class="page">
+  <div class="page-head"><p class="eyebrow">THE COLLECTION / 01—20</p><h1>Signature<br><em>Series.</em></h1><p>Choose a foundation, then personalise every detail in the configurator.</p></div>
+  <section class="collection-grid" id="collectionGrid"></section>
+</main>
+<footer><div>ATELIER<span>JERSEY</span></div><p>Custom performance wear / 2026</p><a href="customizer.html">Create your jersey →</a></footer>
+<script src="js/app.js"></script>
+<script>
+const grid=document.getElementById('collectionGrid');
+for(let i=1;i<=20;i++){
+  const c=document.createElement('article'); c.className='collection-card';
+  c.innerHTML=`<div class="mini-jersey theme-${(i%8)+1}"><span>${String(i).padStart(2,'0')}</span></div>
+  <div class="card-meta"><div><small>ATELIER / ${String(i).padStart(2,'0')}</small><h3>FORM ${String(i).padStart(2,'0')}</h3></div><a href="customizer.html?design=${i}">CUSTOMISE →</a></div>`;
+  grid.appendChild(c);
+}
+</script>
+</body>
+</html>
